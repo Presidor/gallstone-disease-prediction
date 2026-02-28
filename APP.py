@@ -48,7 +48,7 @@ df = load_data()
 # -------------------------------
 # SIDEBAR INPUTS
 # -------------------------------
-st.sidebar.header("🏡 Medical Records")
+st.sidebar.header("🏥🩺 Medical Records")
 
 vitamin_d = st.sidebar.slider("Vitamin D", 3.5, 53.1, 22.0)
 alt = st.sidebar.slider("Alanin Aminotransferaz (ALT)", 3.0, 372.0, 19.0)
