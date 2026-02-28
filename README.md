@@ -113,7 +113,9 @@ This work demonstrates how machine learning can assist medical diagnosis by:
 **Chinonso Athanasius**  
 * BSc Geological Science — Nnamdi Azikiwe University  
 * Data Science & Applied AI Practitioner  
-* Machine Learning Researcher  
+* Machine Learning Researcher
+## APP Link
+(Web APP)[https://gallstone-disease-prediction-erjpvrazctjqs8y7wfaojg.streamlit.app/]
 
 ---
 
