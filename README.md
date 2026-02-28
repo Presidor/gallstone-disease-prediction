@@ -115,7 +115,7 @@ This work demonstrates how machine learning can assist medical diagnosis by:
 * Data Science & Applied AI Practitioner  
 * Machine Learning Researcher
 ## APP Link
-(Web APP)[https://gallstone-disease-prediction-erjpvrazctjqs8y7wfaojg.streamlit.app/]
+[Web APP](https://gallstone-disease-prediction-erjpvrazctjqs8y7wfaojg.streamlit.app/)
 
 ---
 
