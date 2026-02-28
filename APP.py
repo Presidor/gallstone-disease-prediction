@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-from PIL import Image
 import joblib
 import os
 
@@ -9,24 +8,12 @@ import os
 # -------------------------------
 st.set_page_config(
     page_title="Gallstone Disease Predictor",
-    page_icon="🏠",
+    page_icon="🩺",
     layout="wide"
 )
 
-# ------------------------------- 
-# TITLE WITH IMAGE
-col1, col2 = st.columns([1, 5])
-
-with col1:
-    # Load and display medical image (replace with your actual image path)
-    image = Image.open("Gallstones pics.jpg")
-    st.image(image, width=80)
-
-with col2:
-    st.title("🏠 Gallstone Prediction App")
-
+st.title("🩺🏥 Gallstone Prediction App")
 st.write("Predict Gallstone Disease using machine learning based on medical records.")
-
 
 # -------------------------------
 # FILE PATH SETUP (PRODUCTION SAFE)
