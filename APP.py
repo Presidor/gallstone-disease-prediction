@@ -19,7 +19,7 @@ col1, col2 = st.columns([1, 5])
 
 with col1:
     # Load and display medical image (replace with your actual image path)
-    image = Image.open("gallstones_pics.jpg")
+    image = Image.open("Gallstones pics.jpg")
     st.image(image, width=80)
 
 with col2:
