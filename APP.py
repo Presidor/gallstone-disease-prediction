@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import joblib
 import os
+import shap
+import matplotlib.pyplot as plt
 
 # -------------------------------
 # APP CONFIG
@@ -91,8 +93,35 @@ if st.sidebar.button("Predict Gallstone Status"):
         else:
             st.info("❌ Prediction: No Gallstones Detected")
 
+        # -------------------------------
+        # PER-PATIENT SHAP EXPLANATION
+        # -------------------------------
+        st.subheader("🧾 Personalized Prediction Explanation")
+        explainer = shap.Explainer(model, df.drop("Gallstone Status", axis=1))
+        shap_values = explainer(features)
+
+        fig, ax = plt.subplots(figsize=(10, 4))
+        shap.plots.waterfall(shap_values[0], max_display=12, show=False)
+        st.pyplot(fig)
+
     except Exception as e:
         st.error(f"Prediction failed: {e}")
+
+# -------------------------------
+# GLOBAL FEATURE IMPORTANCE
+# -------------------------------
+st.subheader("📊 Global Feature Importance (Model Explanation)")
+
+try:
+    explainer = shap.Explainer(model, df.drop("Gallstone Status", axis=1))
+    shap_values = explainer(df.drop("Gallstone Status", axis=1))
+
+    fig, ax = plt.subplots(figsize=(8, 6))
+    shap.summary_plot(shap_values, df.drop("Gallstone Status", axis=1), plot_type="bar", show=False)
+    st.pyplot(fig)
+
+except Exception as e:
+    st.error(f"Could not generate SHAP chart: {e}")
 
 # -------------------------------
 # FOOTER
