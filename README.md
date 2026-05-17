@@ -110,7 +110,8 @@ This work demonstrates how machine learning can assist medical diagnosis by:
 
 ## 👤 Author
 
-**Chinonso Athanasius**  
+**Prof. S.0. OLATUNJI (AADAM)**
+**Chinonso Athanasius**
 * BSc Geological Science — Nnamdi Azikiwe University  
 * Data Science & Applied AI Practitioner  
 * Machine Learning Researcher
